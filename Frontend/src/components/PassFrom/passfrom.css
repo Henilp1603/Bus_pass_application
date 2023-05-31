@@ -1,0 +1,24 @@
+.select_cate{
+    border: 1px solid var(--black) !important;
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    background: transparent;
+}
+.type-sec{
+    margin-left: 0;
+    margin-top: 10px;
+}
+.edu_div{
+    margin-left: 10px;
+}
+
+.adds_text{
+    border: 1px solid var(--black) !important;
+   /* margin-left: 10px; */
+   margin-top: 5px;
+   font-size: 20px;
+   background: transparent;
+
+
+}
