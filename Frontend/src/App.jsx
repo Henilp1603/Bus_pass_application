@@ -1,6 +1,7 @@
 
 import './App.css'
 import FinalResultSection from './components/FinalResultSection/FinalResultSection'
+import History from './components/HistorySection/History'
 import HomeSection from './components/HomeSection/HomeSection'
 import LoginSection from './components/LoginSection/LoginSection'
 import NavB from './components/NavB'
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<HomeSection/>} />
           <Route path='/signin' element={<LoginSection/>} />
           <Route path='/signup' element={<SignupSection/>} />
+          <Route path='/history' element={<History/>} />
           <Route path='/application' element={<PassFrom/>} />
           <Route path='/application-result' element={<FinalResultSection/>} />
           <Route path='/payment-success' element={<PaymentSuccessPage/>} />
@@ -29,6 +31,7 @@ function App() {
         </Routes>
           {/* <FinalResultSection/> */}
           {/* <PaymentSuccessPage/> */}
+          {/* <History/> */}
       </Router>
     </>
   )

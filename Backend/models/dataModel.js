@@ -15,7 +15,6 @@ const dataSchema = new Schema({
     nod:{type:String,required:true},
     fromdate:{type:String,required:true},
     todate:{type:String,required:true},
-    
 },{timestamps:true})
 
 export default mongoose.model('Data',dataSchema);

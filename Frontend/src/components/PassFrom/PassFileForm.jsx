@@ -30,6 +30,7 @@ const PassFileForm = () => {
                     className="form-control form-control-lg inp"
                     placeholder="Enter a valid Name"
                     name="name"
+                    required
                   />
                 </div>
 
@@ -43,9 +44,9 @@ const PassFileForm = () => {
                     className="form-control form-control-lg inp"
                     placeholder="Enter a Age"
                     name="age"
+                    required
                   />
                 </div>
-
                 <div className="text-center text-lg-start mt-4 pt-2 d-flex align-items-center justify-content-center">
                   <button
                     type="button"

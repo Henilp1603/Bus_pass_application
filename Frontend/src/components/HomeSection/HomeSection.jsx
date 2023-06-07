@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./HomeSection.css";
 import {Link} from "react-router-dom";
 import {useUserContext} from "../../contexts/UserContext";
 
 const HomeSection = () => {
+  const {user,dispatch} = useUserContext();
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("_user");
+    if (loggedInUser) {
+      
+      dispatch({type:"USER",payload:true})
+      
+    }
+  }, []);
   const RenderButton = () => {
-    const {user} = useUserContext();
 
     if (!user) {
       return (

@@ -6,7 +6,6 @@ import { useUserContext } from '../../contexts/UserContext'
 const LoginSection = () => {
 
   const [data,setData]=useState({
-    name:"",
     email:"",
     password:""
   })
@@ -39,7 +38,7 @@ const LoginSection = () => {
     
       console.log(res.token)
       localStorage.setItem("_token",JSON.stringify(res.token))
-      dispatch({type:"USER",payload:true})
+      localStorage.setItem("_user",true)
       navigate("/")
      
     } catch (error) {
@@ -64,19 +63,7 @@ const LoginSection = () => {
                   <div className="sign_in fw-bolder">SIGN IN</div>
                   <hr />
 
-                  <div className="form mb-4">
-                    <label className="form-label lab" for="form3Example3">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="form3Example3"
-                      className="form-control form-control-lg inp"
-                      placeholder="Enter a valid Name"
-                      name="name"
-                      onChange={getData}
-                    />
-                  </div>
+                  
 
                   <div className="form mb-4">
                     <label className="form-label lab" for="form3Example3">

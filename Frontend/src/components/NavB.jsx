@@ -1,21 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './NAvB.css'
 import { Link, useNavigate } from "react-router-dom";
 import { useUserContext } from "../contexts/UserContext";
+import axios from "axios";
 
 const NavB = () => {
 
   const {user,dispatch}=useUserContext()
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("_user");
+    if (loggedInUser) {
+      
+      dispatch({type:"USER",payload:true})
+      
+    }
+  }, []);
  
   const navigate=useNavigate();
 
-  const loogout=()=>{
+  
+  const loogout=async()=>{
+    localStorage.removeItem("_user")
 
-    useEffect(()=>{
+    try {
+      
+      await axios.delete("http://localhost:4000/api/deleteAll")
+    } catch (error) {
+      console.log(error)
+    }
+   
+
       dispatch({type:"USER",payload:false})  
 
       navigate("/")
-  },[])
+
   }
   const RenderMenu=()=>{ 
 
@@ -26,7 +45,7 @@ const NavB = () => {
               <Link to="/"><p>Home</p></Link>
             </li>
             <li>
-              <Link to="/signup"><p>Contact</p></Link>
+              <Link to="/history"><p>History</p></Link>
             </li>
             <li>
               <Link to="/application"><p>From</p></Link>
@@ -46,11 +65,9 @@ const NavB = () => {
               <Link to="/"><p>Home</p></Link>
             </li>
             <li>
-              <Link to="/contact"><p>Contact</p></Link>
-            </li>
-            <li>
               <Link to="/signin"><p>Login</p></Link>
             </li>
+            
             <li>
               <Link to="/signup"><p>Sign Up</p></Link>
             </li>    

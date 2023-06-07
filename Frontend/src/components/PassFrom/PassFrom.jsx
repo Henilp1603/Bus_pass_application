@@ -25,7 +25,7 @@ const PassFrom = () => {
     toplace:"",
     nod:"",
     fromdate:"",
-    todate:""
+    todate:"",
   })
 
   const getData=(e)=>{
@@ -38,6 +38,7 @@ const PassFrom = () => {
       }
     })
   }
+
 
   const addData=async(e)=>{
     e.preventDefault();
@@ -81,6 +82,7 @@ const PassFrom = () => {
                     placeholder="Enter a valid Name"
                     name="name"
                     onChange={getData}
+                    required
                   />
                 </div>
 
@@ -95,6 +97,7 @@ const PassFrom = () => {
                     placeholder="Enter a Age"
                     name="age"
                     onChange={getData}
+                    required
                   />
                 </div>
 
@@ -156,6 +159,7 @@ const PassFrom = () => {
                       cols="50"
                       className="adds_text"
                       onChange={getData}
+                      required
                     ></textarea>
                   </div>
                 </div>
@@ -168,7 +172,7 @@ const PassFrom = () => {
                       Gender
                     </label>
 
-                    <select name="gender" id="form3Example4" className="select_cate type-sec w-100"  onChange={getData} >
+                    <select name="gender" id="form3Example4" className="select_cate type-sec w-100"  onChange={getData} required >
                     <option>Select Gender</option>
                       <option value="male">Male</option>
                       <option value="female">Female</option>
@@ -179,7 +183,7 @@ const PassFrom = () => {
                       Pass Type
                     </label>
 
-                    <select name="passtype" id="form3Example4" className="select_cate type-sec w-100"  onChange={getData} >
+                    <select name="passtype" id="form3Example4" className="select_cate type-sec w-100"  onChange={getData} required >
                     <option>Select Pass Type</option>
                       <option value="Student-pass">Student Pass</option>
                       <option value="Passenger-pass">Passenger Pass </option>

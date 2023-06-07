@@ -1,0 +1,194 @@
+:root{
+    --blue:#0188DF;
+    --black:#354046;
+  }
+
+.Container{
+    display: flex;
+    margin: 7rem 200px;
+}
+
+.cart{
+    width: 100%;
+    background-color: #bab4b4b3;
+}
+.hi_text_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hi_text{
+    text-align: center;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 30px 0;
+}
+
+.top h2{
+    font-size: 30px;
+}
+
+table{
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+th{
+    font-size: 24px;
+}
+
+.hline { width:100%; height:1px; background:rgba(19, 19, 19, 0.913) }
+
+
+.table-head{ 
+    color: white;
+    background-color:var(--blue);
+}
+
+.head-img{
+    text-align: left;
+    padding-left:10px ;
+}
+
+.detailA{
+    margin-top: 30px;
+    padding: 0 30px;
+}
+
+.checkoutdiv{
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.summary{
+    background-color: #bab4b4b3;
+    width: 35%;
+    margin-left:20px ;
+}
+
+.details{
+    margin: 10px 0;
+    padding: 0 10px;
+    align-items: center;
+    background-color:var(--blue);
+    color: white;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.select_pay{
+
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
+    padding: 7px;
+    font-size: 20px;
+
+}
+input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
+    padding: 7px;
+    font-size: 20px;
+
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+   font-size: 20px;
+  }
+
+/* button{
+    border: none;
+    background-color: red;
+    padding: 8px 30px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 20px;
+} */
+
+.first-btn{
+    border: none;
+    background-color: red;
+    padding: 8px 30px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.Quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.checkout{
+    border: none;
+    padding: 8px 30px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 20px;
+    width: 100%;
+    background-color:var(--blue);
+    
+}
+
+
+
+
+.nameTD{
+   width:360px ; 
+}
+
+.nameTD h2{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.priceTD{
+    width: 150px;
+}
+
+.priceTD h2{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.deleteTD{
+    width: 70px;
+}
+
+.deleteTD h2{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+
+
+.empty-cart{
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: auto; */
+    margin: auto;
+}
+
+
